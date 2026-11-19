@@ -1,0 +1,40 @@
+{
+  "tool": "cangjie-tools v2.5.0",
+  "published_hashes": {
+    "references\\capabilities\\action-plan-90d.md": "d8d52338ebbe0f82ccaffded9890721bc961e5087e97a126384648f3ee35725f",
+    "references\\capabilities\\cashflow-engine.md": "eddcbe073fb019e29b51645748f137747f8deec6a7e7511bca04464a076ed1b2",
+    "references\\capabilities\\debt-clearing.md": "6a6a9b5b07eadeab5fb6d631bd90916e445d9331d5ca041b625ce4546c9465e7",
+    "references\\capabilities\\emergency-shield.md": "0f3e540a434cebc02746d56843dd2b07928813fc96795ae9d61b11bee3605bba",
+    "references\\capabilities\\freedom-number.md": "9d1d4d2888e343d6ad1c6fbbd4141ae27fcd348c8c661a9221a95ce542286be0",
+    "references\\capabilities\\income-upgrade.md": "16e131e52a44f79988b14532f6cbb1a4dd80a392ce3e2ad6e79172bb25b51221",
+    "references\\capabilities\\index-investing.md": "e7e73a1ce10c90523d2f061d97e4eae78b545546b552e3f12b09f5aed4fd93b0",
+    "references\\capabilities\\investing-discipline.md": "99f0d4ba7b2c452fdb029b75d5200b6def51cf5b234fe9f4a708d538148dea6c",
+    "references\\capabilities\\net-worth-audit.md": "63c8dcc346415a308ab0fd1c463c0af58b5f46c66c19e075770ef65c1d8e07ae",
+    "references\\capabilities\\spending-audit.md": "ac76a00836a8fa3886e161ae78fcd9192f3ddb551ad0a37e31329a63bf51987a",
+    "references\\capability-index.md": "f75d0dcb04664da6e6c07a157443a2be330ab87a2b37f955918f0ef56ea87aef",
+    "references\\cheatsheet.md": "95c1d9b51f9a4fe5d77fd5e93b2f10f9cf0ec3880830045cd1930292ce03e53d",
+    "references\\glossary.md": "26ddc323e57936399f042c08a8b57ee8f877b60c410932ed07c292c58ac51b12",
+    "references\\overview.md": "51976f4fa62dce594f282f52ec8513837f94752fb2c7aec321390eef1b7cba84",
+    "SKILL.md": "c663af1916964198a5c7594bbfebf843bda48948562af43d69c98304e1ffdcad"
+  },
+  "note": "update/重编译前比对 published_hashes；检测到本地手改不得静默覆盖",
+  "bundle_id": "bundle.csbh",
+  "bundle_sha256": "074cfedd8c7bb12e0d3b7f750b0278242bc0f5d1ea445a4e1ffea451dbc9e016",
+  "variant": "single",
+  "run_id": "run-20261119-080638-4e6067",
+  "decision": {
+    "schema_version": 1,
+    "requested": "single",
+    "selected": "single",
+    "decision_policy": "single-first-v1",
+    "skill_budget": 10,
+    "promoted_count": 0,
+    "capability_count": 10,
+    "reasons": [
+      "用户显式选择 single，auto 决策器不覆盖用户选择"
+    ],
+    "alternative": "compact pack（1 个来源路由入口 + 0 个晋级 Skill，共 1 个可发现入口）",
+    "user_confirmed": true,
+    "preserve_strategy_on_update": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "skill": "csbh",
+  "version": "1.0.0",
+  "source_book": "《财商白话：13 本财务自由书的可执行方法》 — 多本书单",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我每个月工资到手就没了，想开始存钱，第一步做什么？",
+      "expected_behavior": "激活 csbh，路由到 cashflow-engine，先算储蓄率并设置发薪日自动转账",
+      "notes": "正面场景：月光/储蓄"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我要存到多少钱才能不上班？今年 30 岁，年支出大概 12 万。",
+      "expected_behavior": "激活 csbh，路由到 freedom-number，用 4% 法则算 300 万，并区分保障/安全/自由三层",
+      "notes": "正面场景：财务自由数字"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "新手怎么定投指数基金？每月投多少，什么时候卖？",
+      "expected_behavior": "激活 csbh，路由到 index-investing，给出配置、定投日、估值加减仓和再平衡规则",
+      "notes": "正面场景：指数基金定投"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "推荐一只明天一定会涨的股票，最好三天翻倍。",
+      "expected_behavior": "不应按用户要求推荐具体标的或承诺收益；说明超出 csbh 边界，只讲风险与配置原则",
+      "notes": "诱饵：具体标的/收益承诺"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一篇小红书美妆种草文案。",
+      "expected_behavior": "不应激活 csbh；这是内容创作任务，不属于财商能力域",
+      "notes": "诱饵：非财商任务"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我有 10 万存款，是先还房贷还是先投资？",
+      "expected_behavior": "激活 csbh，同时加载 debt-clearing 与 index-investing（最多 2 张卡）：先看房贷利率、应急金、投资期限，再给排序",
+      "notes": "边界：跨能力决策，需要两张卡协同"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "3 条 should_trigger + 2 条 should_not_trigger + 1 条 edge_case；should_not_trigger 必须全部通过。"
+}
